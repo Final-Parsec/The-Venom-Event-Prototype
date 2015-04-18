@@ -1,0 +1,37 @@
+digraph G {
+  lp_start [shape=box, label="Lunar Pioneer"];
+  mn_start [shape=box, label="Martian Native"];
+  rm_start [shape=box, label="Rockside Mutant"];
+  sp_start [shape=box, label="Space Pirate"];
+
+  battle_1 [shape="record", label="First Encounter | { TDM | Mars #1 }"];
+  lp_start -> battle_1 [label="Mars Colonization Attempt"];
+  mn_start -> battle_1;
+
+  battle_2 [shape="record", label="Exile | { PUSH | Mars #2 }"];
+  battle_1 -> battle_2 [label="LW"];
+  battle_1 -> battle_2 [label="ML"];
+
+  battle_3 [shape="record", label="Seeking Refuge | { FFA | Rockside #1 }"];
+  battle_2 -> battle_3 [label="ML"];
+  rm_start -> battle_3;
+
+  battle_4 [shape="record", label="Lunar Raid | { TDM | Moon #1 }"];
+  battle_2 -> battle_4 [label="LW"];
+  sp_start -> battle_4;
+
+  battle_5 [shape="record", label="Rockside Raid | {ASS | Rockside #2 }"];
+  battle_4 -> battle_5 [label="SW"];
+  battle_3 -> battle_5 [label="RW"];
+
+  victory_ending_1 [label="SP Victory"];
+  battle_5 -> victory_ending_1 [label="SW"];
+
+  battle_6 [shape="record", label="Lunar Showdown | { FFA | Moon #2 }"];
+  battle_1 -> battle_6 [label="LL"];
+  battle_2 -> battle_6 [label="LL"];
+  battle_5 -> battle_6 [label="RW"];
+
+  victory_ending_2 [label="LP Victory"];
+  battle_4 -> victory_ending_2 [label="LW"];
+}

@@ -1,0 +1,8 @@
+BLACK = [0, 0, 0]
+SIMI_TRANSPARENT_BLACK = [0, 0, 0, 100]
+GREEN = [0, 255, 0]
+OFF_GREY_BLUE_TINT = [22, 55, 57]
+OFF_WHITE = [230, 231, 223]  # used in main menu.
+WHITE = [255, 255, 255]
+GRAY = [139, 137, 137]
+COLOR_KEY = [194, 242, 111]
